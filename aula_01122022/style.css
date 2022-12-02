@@ -1,0 +1,25 @@
+.header_main {
+    background-color: #ad64f1;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.header_nav_ul {
+    display: flex;
+    gap: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header_nav_ul_li {
+    list-style: none;
+    color: black;
+}
+
+.header_nav_ul_li:hover {
+    scale: 1.04;
+    color: white;
+}
