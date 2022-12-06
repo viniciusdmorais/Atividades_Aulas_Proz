@@ -6,7 +6,16 @@ fieldset {
     background-color: #e0c699;
 }
 
-.img-main {
-    width: 80%;
-    margin-left: 50px;
+#img-main {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.li-main {
+    display: flex;
+    justify-content: space-between;
 }
