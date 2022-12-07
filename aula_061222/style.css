@@ -1,0 +1,87 @@
+header {
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/*
+nav {
+   background-color: #EF7D19; 
+}
+*/
+
+
+ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+nav ul li {
+  padding-left: 16px;
+  list-style-type: none;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+  transition: all 0.4s ease-in-out; /* transição para mudar a cor do link de forma suave */
+  cursor: pointer;   /* efeito muda o mouse para mãozinha */
+}
+li:hover {
+  scale: 1.1px;
+}
+
+.body-index {
+  background-color: #59378D;
+  height: 100vh; /* 100vh signfica que vai ocupar tudo de altura*/
+  color: white;
+}
+
+.main-format-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* direciona em coluna os itens*/
+  align-items: center;
+  padding: 0px 400px;
+}
+.proz_main_titles {
+  align-self: flex-start; /* faz o alinhamento do proprio item no inicio */
+  padding-left: 10px;
+}
+
+.proz_main_title {
+  font-size: 60px;
+}
+
+.proz_main_subtitle {
+  font-size: 22px;
+}
+
+.proz_description_section {
+  display: flex; 
+  gap: 40px;        /* pequeno espaço entre os itens */
+  margin-top: 30px;
+}
+
+.proz_description_services_one, .proz_description_services_two { /* aqui foi usado duas classes recebendo o mesmo estilo */
+  background: url(img/bg_laranja.jpg); /* adiciona a imagem de background */
+  border-radius: 12px;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+}
+
+.proz_description_services_one:hover, .proz_description_services_two:hover {
+  scale: 1.1;
+}
+
+.proz_description_services_title {
+  margin-bottom: 15px;
+}
