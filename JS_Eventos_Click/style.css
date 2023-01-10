@@ -1,0 +1,15 @@
+/*
+Para o elemento span, usamos a propriedade opacity para definir a opacidade ou a transparência do elemento, 
+passando valores entre 0 (completamente transparente) até 100 (completamente opaco).
+Também usamos a propriedade transition para definir que todas as propriedades alteradas 
+no elemento de valor all deverão ter uma transição de 0.3 segundos, com valor 0.3s.
+*/
+
+#span-aula-1 {
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+#section-aula-1 {
+    margin-top: 1rem;
+}
