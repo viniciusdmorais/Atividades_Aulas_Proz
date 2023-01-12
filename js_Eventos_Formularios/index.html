@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+
+    <title>JS Eventos de Formularios</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" value="35" placeholder="Campo Obrigatório">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <pre>
+
+
+Introdução
+Eventos de mouse e de teclado são úteis para adicionar diversas interatividades aos nossos sites. Porém, eles possuem limitações no trabalho com formulários.
+Para resolver essa questão, a linguagem JavaScript tem um grupo de eventos específicos voltados para implementar as validações de formulários.
+Nesse material, aprenderemos a usar quatro desses métodos.
+
+Setup de arquivos
+Para demonstrar o uso de ambas funções, usaremos como exemplo um projeto simples com dois arquivos: index.html e script.js. 
+O arquivo index.html segue o padrão de estrutura base da HTML e possui os seguintes elementos dentro da tag &lt;body&gt;&lt;/body&gt;:
+
+&lt;form action=""&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    &lt;br&gt;
+    &lt;label for="idade"&gt;Idade:&lt;/label&gt;
+    &lt;input type="number" id="idade" name="idade" value="35"&gt;
+    &lt;br&gt;
+    &lt;button type="submit">Enviar&lt;/button&gt;
+  &lt;/form&gt;
+
+<img src="https://media.slid.es/uploads/886439/images/10109200/image1.png" alt="img da proz">
+
+Neste caso, estamos usando a tag br para evitar criar mais um arquivo. 
+Porém, para isso, é recomendável definir todas as estilizações com CSS.
+
+O input de idade usa o atributo value para ser renderizado no navegador com um valor padrão de 35.
+
+Além disso, dentro da tag &lt;head&gt;&lt;/head&gt;, 
+incluímos a tag &lt;script src="script.js" defer&gt;&lt;/script&gt; para conectar o arquivo HTML com o script.js, 
+que está na mesma pasta que o index.html.
+
+No arquivo script.js, para adiantar o processo, capturamos todos os elementos do DOM que usaremos.
+
+Para isso, usamos os métodos getElementById e querySelector.
+let inputEmail = document.getElementById("email");
+let inputIdade = document.getElementById("idade");
+let formulario = document.querySelector("form");
+
+Descrição dos eventos em formulário
+
+Quando trabalhamos com formulários, temos três tipos principais de eventos:
+
+Evento	Descrição
+focus	O elemento é focado pelo usuário.
+blur	O elemento perde o foco do usuário.
+change	O elemento teve seu valor alterado depois de perder o foco.
+
+Evento focus
+
+Para entender melhor como funciona o evento focus, vamos usar o aplicativo WhatsApp como exemplo.
+Quando você quer mandar uma mensagem para alguém, primeiro você clica na caixa de texto vazia para aparecer a barra do teclado. 
+Nesse momento, dizemos que o input ganhou foco.
+Depois, você digita o texto e pressiona o botão de enviar. Quando o celular não mostra mais o teclado, 
+ele indica que você não consegue mais inserir dados na caixa de texto, ou seja, o input de texto perdeu o foco.
+
+<img src="https://media.slid.es/uploads/886439/images/10109212/08.png" alt="img proz">
+Quando os inputs de texto ganham foco, geralmente, vemos uma barra vertical indicando a posição do cursor.
+
+Evento focus
+
+Para demonstrar o uso do input, precisamos abrir o arquivo script.js e 
+adicionar um eventListener ao elemento inputEmail.
+
+O primeiro argumento será a string focus e o segundo, uma arrow function:
+
+inputEmail.addEventListener("focus", ()=> {
+
+});
+
+Agora, vamos mudar a cor de fundo do input quando ele ganhar foco. 
+
+Podemos fazer isso chamando o próprio elemento inputEmail dentro do bloco
+ do código da arrow function. 
+
+Outra opção é usar um argumento evento e acessar sua propriedade target.
+ Nesse último caso, chamaremos o próprio elemento: 
+
+inputEmail.addEventListener("focus", ()=> {
+  inputEmail.style.backgroundColor = "lightgreen"
+});
+
+Após salvar as alterações e abrir o nosso projeto no navegador, 
+o input de e-mail deve mudar a cor de fundo quando clicamos nele ou na sua respectiva label.
+
+<img src="https://media.slid.es/uploads/886439/images/10109217/image4.png" alt="img proz">
+O focus é comumente usado para exibir algum tipo de texto que ajude o 
+usuário a preencher o campo. 
+Por exemplo, a mensagem "Não use caracteres especiais nem espaços".
+
+Evento blur
+
+Nosso input de e-mail está sendo alterado quando ganha foco. 
+Porém, se clicarmos fora dele, ou se acessarmos o próximo input 
+sem finalizar o primeiro, o input de e-mail permanece com as alterações 
+que definimos previamente. Observe a imagem de exemplo.
+
+<img src="https://media.slid.es/uploads/886439/images/10109219/image2.png" alt="img proz">
+
+Para definir o que deve acontecer com um elemento após perder o foco, 
+usamos o evento blur.
+Assim, chamamos o elemento inputEmail novamente e adicionamos mais 
+um eventListener.
+Porém, desta vez, passaremos a string blur como primeiro argumento 
+e uma arrow function como segundo. Dessa forma:
+
+inputEmail.addEventListener("blur", ()=> { 
+
+});
+
+Repetiremos o processo do exemplo anterior e, desta vez, 
+vamos manipular o elemento acessando o evento.
+Para isso, precisamos passar um argumento, que representa o evento, 
+dentro dos parênteses da arrow function. Depois, é necessário acessar 
+a propriedade target dele dentro do bloco de código.
+Assim, temos acesso às propriedades style e backgroundColor:
+
+inputEmail.addEventListener("blur", (e)=> {
+  e.target.style.backgroundColor = ""
+});
+
+Atribui uma string vazia como valor da propriedade backgroundColor, 
+que removerá a estilização aplicada na etapa anterior.
+
+<img src="https://media.slid.es/uploads/886439/images/10109220/image3.png" alt="img proz">
+
+Após salvar as mudanças e voltar no navegador, 
+devemos ver nosso input de e-mail ganhando e perdendo a 
+estilização cada vez que clicamos dentro e fora dele, 
+independentemente do valor que ele possui.
+
+Evento change
+
+O evento change é disparado quando um elemento sofre uma alteração no 
+seu valor. Contudo, isso pode variar de acordo com o tipo de input e 
+da forma como alteramos os seus dados.
+Para demonstrar isso, chamamos o elemento inputIdade, aplicamos o método
+addEventListener, passamos como primeiro argumento a string change e, 
+como segundo, uma arrow function. Observe:
+
+inputIdade.addEventListener("change", ()=> {
+
+});
+
+Para visualizar o momento em que o evento change é disparado, executamos 
+a função alert() com alguma mensagem dentro do bloco de código da arrow 
+function.
+
+inputIdade.addEventListener("change", ()=> {
+  alert("Certeza que quer alterar seus dados?")
+});
+
+Ao salvar as mudanças e verificar o navegador, veremos que um alerta é 
+disparado cada vez que alteramos o valor do input de idade clicando em 
+alguma das setas no lado direito do input.
+
+<img src="https://media.slid.es/uploads/886439/images/10109222/image5.png" alt="img proz">
+
+Entretanto, se você digitar o valor da idade diretamente no input, verá
+ que o evento só é disparado após o input perder o foco.
+Esse é um comportamento que devemos levar em consideração quando usamos o
+evento change com inputs de texto.
+
+Evento submit
+
+É sempre importante mostrar algum feedback ao clicar no botão de enviar. 
+Seja para avisar que não foi possível efetivar o envio por falta de 
+informações obrigatórias ou para confirmar que as informações mandadas 
+estão corretas.
+
+Para fazer isso, chamamos o elemento formulário, adicionamos nele o 
+método addEventListener, passamos a string do evento submit como 
+primeiro parâmetro e, como segundo, uma arrow function:
+
+formulario.addEventListener("submit", ()=> { 
+
+});
+
+Se salvarmos as mudanças e voltarmos no navegador, nossa mensagem será 
+exibida ao clicar no botão de Enviar:
+
+<img src="https://media.slid.es/uploads/886439/images/10109226/image6.png" alt="img proz">
+
+Conclusão
+
+Nesses exemplos, usamos os eventos de formulário apenas para aplicar 
+algumas estilizações e mandar mensagens de alerta. Porém, existe uma 
+infinidade de ações que podemos aplicar em conjunto com eles.
+
+Limitar um número mínimo ou máximo de caracteres, verificar se um e-mail 
+possui ou não um domínio específico, destacar inputs com valores 
+inválidos e impedir o envio de um formulário, caso algum campo 
+obrigatório esteja vazio, são apenas algumas das validações que podemos 
+aplicar usando esses eventos.
+
+Leitura complementar
+RICARDO. Trabalhando com eventos em JavaScript. Dev Media, 2013. 
+Disponível em: <a href="https://www.devmedia.com.br/trabalhando-com-eventos-em-javascript/28521">https://www.devmedia.com.br/trabalhando-com-eventos-em-javascript/28521</a>. Acesso em: 23 dez. 2022.
+GALLO, Vanessa. Eventos com JavaScript. 
+Computer Science Master, 6 mar. 2022. 
+Disponível em: <a href="https://www.computersciencemaster.com.br/eventos-com-javascript/">https://www.computersciencemaster.com.br/eventos-com-javascript/</a> Acesso em: 23 dez. 2022.
+
+Referência bibliográfica
+GoPHP. 34 - Form Events | Events in JavaScript | JavaScript Tutorial for Beginners. 11 jun. 2020. Disponível em: <a href="https://www.youtube.com/watch?v=YUIHbcOjdKM">https://www.youtube.com/watch?v=YUIHbcOjdKM</a>. Acesso em: 23 dez. 2022.
+    </pre>
+    
+</body>
+</html>
