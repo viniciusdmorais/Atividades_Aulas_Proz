@@ -1,0 +1,102 @@
+Banco de Dados I
+
+Conceitos básicos -
+
+Banco de dados (BD)
+
+Os bancos de dados podem ser dados de cadastros, históricos de compras, 
+de filmes vistos, de músicas tocadas etc. Dificilmente, há uma aplicação que não precise guardar 
+algum tipo de informação.
+Assim, o database, ou banco de dados, é onde conseguimos guardar informações que fazem o nosso 
+sistema funcionar.
+
+Um banco de dados é definido como uma coleção de dados persistentes, pois ele continua armazenando
+ os dados mesmo se a máquina em uso for desligada.
+É bem diferente de uma memória de RAM, por exemplo, que perde todos os seus dados quando a máquina 
+é encerrada.
+
+Os primeiros bancos de dados surgiram em 1960 incentivados pela International Business Machines 
+Corporation (IBM), a maior empresa relacionada à tecnologia daquela época.
+A IBM visava otimizar o armazenamento de dados que até então era feito através do acesso sequencial 
+e do arquivo de acesso direto.
+
+Atualmente, o termo “banco de dados” é muito popular. Ele está inserido em muitas áreas 
+corporativas, educacionais, governamentais e em qualquer ambiente que possa coletar informações 
+e representá-las de forma organizada.
+
+Heuser (2009) define “dado” como sendo um fato registrado do mundo real, que possui um significado 
+implícito no contexto de domínio de aplicação.
+
+Um banco de dados é um conjunto de dados inter-relacionados (SILBERSCHATZ, 2006), 
+podendo ser classificado como relacional ou não relacional.
+O banco de dados relacional utiliza um formato regular, ou seja, suas informações são sequenciais
+e a velocidade de acesso aos dados pelos computadores é mais lenta.  Atualmente, 
+é um dos bancos mais utilizados.
+
+Banco de dados relacional
+
+Esse tipo de banco de dados possui os dados armazenados em tabelas separadas, 
+sendo possível relacioná-las. Nos bancos relacionais, as tabelas e os dados ocupam menos espaço 
+e são mais eficientes.
+
+Abstração de dados
+
+A abstração de dados garante uma visão intangível de um banco de dados para seu usuário.
+Não importa para o usuário saber a maneira como esses dados estão armazenados, 
+o importante é tê-los disponíveis quando solicitados.
+
+A abstração de dados apresenta uma visão geral de um banco de dados.
+
+De acordo com Silberschatz (2006), existem três níveis de abstração de dados.  
+O físico é a abstração mais baixa, ele mostra como os dados são realmente armazenados
+no banco de dados.
+
+O lógico é  de abstração intermediária, mostra os dados armazenados no banco de dados e as 
+relações existentes entre eles.
+
+A visualização é o nível de abstração mais alto, apresenta a parte do banco de dados 
+de maior interesse para o usuário final.
+
+Modelos de dados
+
+Silberschatz (2006) diz que um modelo de dados é uma coleção de ferramentas conceituais 
+para descrever dados, relações de dados, semântica de dados e restrições de consistência. 
+Ou seja, um modelo de dados descreve a estrutura lógica e física de um banco de dados.
+Para Elmasri (2008), existem dois níveis de modelos de dados: alto nível, modelos de dados 
+conceituais que descrevem os dados como os usuários os percebem; baixo nível, modelos de dados 
+físicos, descrevem os detalhes de como os dados estão armazenados no computador.
+
+                        Sistema de Gerenciamento de Banco de Dados (SGBD)
+
+É através do Sistema de Gerenciamento de Banco de Dados (SGBD) que o usuário pode criar e manipular
+os bancos de dados.
+O SGBD é um conjunto de softwares formado por um ou vários bancos de dados e possui aplicações 
+capazes de manipular esses bancos.
+Ele possui um catálogo de dados que tem uma descrição completa de como os dados estão armazenados. 
+Essas informações recebem o nome de metadados
+
+O SGBD ainda proporciona a separação entre programas e dados. Assim, qualquer modificação 
+feita na estrutura  não vai alterar o código fonte como era feito no processamento tradicional de 
+arquivos, a estrutura é modificada só no catálogo, sem alterar o programa.
+
+Como qualquer outra ferramenta de tecnologias, o SGBD pode apresentar vantagens e desvantagens 
+em seu uso.
+
+Uma desvantagem é o alto custo de implementação, já que equipamentos (hardwares) adequados são 
+necessários. Além disso, toda a concepção de um SGBD demanda gerenciamento e manutenção, o que 
+não é simples para um orçamento de projeto.
+
+Já as vantagens são inúmeras.
+Controle de redundância: necessário para o usuário manter seu próprio conjunto de arquivos de dados,
+assim, não há redundância que prejudique o sistema;
+
+Compartilhamento de dados;
+
+Restrição ao acesso não autorizado;
+
+Padronização; e 
+
+Redução do tempo de desenvolvimento de aplicações.
+
+
+

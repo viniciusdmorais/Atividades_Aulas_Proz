@@ -1,0 +1,88 @@
+BANCO DE DADOS 1
+
+Etapas da modelagem de banco de dados
+
+Duas Etapas
+1- Análise de requisitos
+    - Possível identificar os dados a serem armazenados no banco descartando
+    os que não são necessários.
+
+2- Modelagem propriamente dita
+    - O inicio é dado pelo Modelo ENTIDADES - Relacionamento (MER)
+    - A partir desse modelo podemos criar
+        - Diagrama Entidade - Relacionamento (DER)
+            - Apresenta graficamente a estrutura do banco de dados e sua
+            relacao com os elementos.
+    - ATRIBUTOS do MER
+        - Para identificar os diferentes tipos de dados e como se RELACIONAM
+        - ENTIDADES 
+            - representadas pelo retangulo
+            - Podem ser:
+                - Fortes 
+                    - Existencia independente, não depende de outras entidades
+                - Fracas 
+                    - Precisa das outras para existir
+                - Associativas
+                    - Quando existe a necessidade de associar uma entidade
+                    a um relacionamento
+        - ATRIBUTOS
+            - representados pelo eclipse
+            - Servem para caracterizar e escrever a entidade dentro de um 
+            dominio
+            - Possuem funções:
+                - Descritivas
+                    - Um nome, Uma cor
+                - Nominativas
+                    - Um nome, Um Código, Um Número
+                - Referenciais
+                    - O CPF de um cliente após uma venda
+            Estruturas podem ser:
+                - Simples
+                    - Apenas 1 atributo define a caracteristica da entidade
+                - Composta
+                    - São utilizados vários atributos para definir as
+                    informações da entidade
+            - Exemplo:
+                - 3 atributos para cada entidade:
+                    Pessoa contém CPF(Referencial), Nome(Descritivo), Sexo(Descritivo)
+                    Utiliza
+                    Computador contém Cod(Nominativo), Modelo(Descritivo), Marca(Descritivo)
+        - RELACIONAMENTOS
+            - representados pelo losango
+            - Existem 3 tipos:
+                - Um para um
+                    - as duas entidades envolvidas tem referencia obrigatoria
+                    a apenas uma unidade da outra
+                    - Exemplo:
+                        - Computador -> Placa-mãe
+                - Um para muitos
+                    - Uma pode fazer referencia a varias unidades da outra. 
+                    Enquanto essas unidades só podem fazer referência a uma
+                    - Exemplo:
+                        - uma Cidade -> um Estado
+                        - um Estado -> várias Cidade
+                - Muitos para muitos
+                    - Uma pode fazer referencia a varias unidades da outra e 
+                    vice versa
+                        - Exemplo:
+                            - Funcionario <--> Participa <--> Projeto
+                            (um ou mais funcionarios podem participar de
+                            um projeto ou um projeto pode ter um ou mais
+                            funcionarios.)
+
+Representação graficamente do banco de dados
+    - é preciso identificar quem são as entidades que podem ser classificadas
+    como LÓGICA ou FÍSICA
+    
+    Exemplo: 
+        - 3 entidades
+            - Aluno, Professor e disciplina
+        - 8 atributos
+            - (Matricula, Nome_aluno), (CPF, Nome_Professor), (Código, Nome_Disciplina, 
+            Sala, Horario)
+        - 2 Relacionamentos
+            - Estuda, Leciona
+        
+
+     
+

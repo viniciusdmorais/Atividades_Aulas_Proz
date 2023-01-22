@@ -1,0 +1,68 @@
+Banco de dados e seus conceitos básicos
+
+Antes dos PCs tudo era guardado em 
+Fichas, Arquivos, Impressos
+
+O problema se dava quando os registros chegavam a uma grande quantidade
+
+Exemplo: Biblioteca
+Sistema de arquivos manual
+Dados eram guardados em papel
+Guardados em armarios metálicos
+
+Lento, rudimentar e ineficaz
+
+Com os computadores houve uma nova maneira de guardar dados
+Acesso sequencial:
+    - Registros eram acessados em sequencia
+    - Para ler o arquivo 10 era necessário ler os seus anteriores
+    - Cartões perfurados
+    - Fitas magnéticas
+
+Arquivo de acesso direto:
+    - Disco
+    - Disquete
+    - Winchester
+
+Antes os registros eram mantidos internamente em:
+    - tabelas
+    - Numerações
+    - Indices
+
+1060 surgiu os primeiros bancos de dados:
+    - Base de dados 
+    - SGBD (Sistema Gerenciador de Banco de Dados)
+    - Linguagem de exploração
+    - Programas adicionais
+
+Nos anos 60 também surgiram os modelos :
+    - hierarquicos
+    - Rede
+    - Serviam para armazenar dados de maneira eficiente
+    - Não havia relacionamento entre os dados
+
+Em 1970 surgiu novo modelo:
+    - Relacional
+        - criado por Ted Codd
+        - Armazenar e relacionar dados em tabelas separadas
+        - Aumentando velocidade
+        - Flexibilidade nas consultas
+    - Tabelas que podem se relacionar com outras tabelas:
+        - Ocupam menos espaço de armazenamento
+        - Rapidez ao acesso dos ddados
+
+Em 70  também surgiu o primeiro SGBD:
+    - Chamado de DBMS ou Database Management System
+    - SGBD é um grupo de programas que interagem com os dados
+    - Exemplos de SGBD:
+        - Oracle
+        - PostgreSQL
+        - MySQL
+        - Firebird
+        - SQL Server
+        - Entre outros...
+
+
+
+
+
